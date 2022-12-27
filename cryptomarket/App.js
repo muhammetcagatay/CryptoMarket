@@ -11,12 +11,14 @@ export default function App() {
       source={{uri:'https://assets.coingecko.com/coins/images/1/thumb/bitcoin.png?1547033579'}}
        style = {{height: 30, width: 30, marginRight:10,alignSelf: "center"}}
       /> 
-      <View>
+	   <View>
          <Text style= {styles.title}>Bitcoin</Text>
          <View style = {{flexDirection: "row"}}>
-            <Text style = {styles.text}>1</Text>
+          <View style = {styles.rankContainer}>
+            <Text style = {styles.rank}>1</Text>
+          </View>
             <Text style = {styles.text}>BTC</Text>
-            <AntDesign name='caretdown' size={20} color = "white" />
+            <AntDesign name='caretdown' size={12} color = "white" style = {{alignSelf : 'center',marginRight :10}} />
             <Text style = {styles.text}>0.63%</Text>
          </View>
       </View>
