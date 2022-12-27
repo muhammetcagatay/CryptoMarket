@@ -27,3 +27,17 @@ export const allPortfolioBoughtAssetsFromAPI = selector({
         return boughtAssets.sort((item1,item2) => (item1.quantityBought * item1.currentPrice) < (item2.quantityBought * item2.currentPrice))
     }
 })
+
+export const allPortfolioAssets = atom({
+    key:'allPortfolioAssets',
+    default:allPortfolioBoughtAssetsFromAPI
+})
+
+// portfolio'ya her girdiğimizde price güncellenmeli
+
+
+
+export const allPortfolioBoughtAssetsInStorage = atom({
+    key:'allPortfolioBoughtAssetsInStorage',
+    default:allPortfolioBoughtAssets,
+})
